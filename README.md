@@ -1,6 +1,9 @@
 # **AI Writer - Frontend**
 This is a frontend for the AI Writer. It is written in JavaScript and uses the [React](https://facebook.github.io/react/) framework.
 
+Go to the aiwriter directory using:
+### `cd aiwriter`
+
 ## Available Scripts
 
 To install all the requirend modules, (when running for the first time), you can run:
