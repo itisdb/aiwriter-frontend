@@ -125,7 +125,7 @@ export const Header = (props) => {
                           <a
                             href="https://themesberg.com/docs/neumorphism-ui/components/alerts"
                             target="_blank"
-                            className="btn btn-primary mb-2 mb-sm-0"
+                            className="btn btn-primary mb-2 mb-sm-0" rel="noreferrer"
                           >
                             <span className="mr-1">
                               <span className="fas fa-book" />
@@ -189,7 +189,7 @@ export const Header = (props) => {
                           <a
                             className="dropdown-item d-flex align-items-center justify-content-between"
                             href="https://themesberg.com/docs/neumorphism-ui/plugins/jquery-counters/"
-                            target="_blank"
+                            target="_blank" rel="noreferrer"
                           >
                             Counters{" "}
                             <span className="badge badge-dark ml-3">Pro</span>
@@ -207,7 +207,7 @@ export const Header = (props) => {
                           <a
                             className="dropdown-item d-flex align-items-center justify-content-between"
                             href="https://themesberg.com/docs/neumorphism-ui/components/e-commerce/"
-                            target="_blank"
+                            target="_blank" rel="noreferrer"
                           >
                             E-commerce{" "}
                             <span className="badge badge-dark ml-3">Pro</span>
@@ -229,7 +229,7 @@ export const Header = (props) => {
                           <a
                             className="dropdown-item d-flex align-items-center justify-content-between"
                             href="https://themesberg.com/docs/neumorphism-ui/components/icon-boxes/"
-                            target="_blank"
+                            target="_blank" rel="noreferrer"
                           >
                             Icon Boxes{" "}
                             <span className="badge badge-dark ml-3">Pro</span>
@@ -255,7 +255,7 @@ export const Header = (props) => {
                           <a
                             className="dropdown-item d-flex align-items-center justify-content-between"
                             href="https://themesberg.com/docs/neumorphism-ui/plugins/owl-carousel/"
-                            target="_blank"
+                            target="_blank" rel="noreferrer"
                           >
                             Owl Carousels{" "}
                             <span className="badge badge-dark ml-3">Pro</span>
@@ -293,7 +293,7 @@ export const Header = (props) => {
                           <a
                             className="dropdown-item d-flex align-items-center justify-content-between"
                             href="https://themesberg.com/docs/neumorphism-ui/components/icon-boxes/#steps"
-                            target="_blank"
+                            target="_blank" rel="noreferrer"
                           >
                             Steps{" "}
                             <span className="badge badge-dark ml-3">Pro</span>
@@ -327,7 +327,7 @@ export const Header = (props) => {
                           <a
                             className="dropdown-item d-flex align-items-center justify-content-between"
                             href="https://themesberg.com/docs/neumorphism-ui/components/timelines/"
-                            target="_blank"
+                            target="_blank" rel="noreferrer"
                           >
                             Timelines{" "}
                             <span className="badge badge-dark ml-3">Pro</span>
@@ -353,7 +353,7 @@ export const Header = (props) => {
                           <a
                             className="dropdown-item d-flex align-items-center justify-content-between"
                             href="https://demo.themesberg.com/neumorphism-ui-pro/html/components/widgets.html"
-                            target="_blank"
+                            target="_blank" rel="noreferrer"
                           >
                             Widgets{" "}
                             <span className="badge badge-dark ml-3">Pro</span>
@@ -375,7 +375,7 @@ export const Header = (props) => {
                       <a
                         href="https://themesberg.com/docs/neumorphism-ui/getting-started/quick-start/"
                         target="_blank"
-                        className="list-group-item list-group-item-action d-flex align-items-center p-0 py-3 px-lg-4"
+                        className="list-group-item list-group-item-action d-flex align-items-center p-0 py-3 px-lg-4" rel="noreferrer"
                       >
                         <span className="icon icon-sm icon-secondary">
                           <span className="fas fa-file-alt" />
@@ -393,7 +393,7 @@ export const Header = (props) => {
                       <a
                         href="https://github.com/themesberg/th-neumorphism-ui-pro/issues"
                         target="_blank"
-                        className="list-group-item list-group-item-action d-flex align-items-center p-0 py-3 px-lg-4"
+                        className="list-group-item list-group-item-action d-flex align-items-center p-0 py-3 px-lg-4" rel="noreferrer"
                       >
                         <span className="icon icon-sm icon-secondary">
                           <span className="fas fa-microphone-alt" />
@@ -415,14 +415,14 @@ export const Header = (props) => {
             <a
               href="https://themesberg.com/product/ui-kits/neumorphism-ui-pro"
               target="_blank"
-              className="btn btn-primary text-secondary mr-3"
+              className="btn btn-primary text-secondary mr-3" rel="noreferrer"
             >
               <i className="far fa-paper-plane mr-2" /> Upgrade to PRO
             </a>
             <a
               href="https://themesberg.com/docs/neumorphism-ui/getting-started/quick-start/"
               target="_blank"
-              className="btn btn-primary d-none d-md-inline-block"
+              className="btn btn-primary d-none d-md-inline-block" rel="noreferrer"
             >
               <i className="fas fa-book" /> Docs v1.0
             </a>
@@ -447,5 +447,5 @@ Header.defaultProps = {
   Title: "Title",
 };
 Header.propTypes = {
-  Title: propTypes.string.isRequired,
+  Title: propTypes.string,
 };
