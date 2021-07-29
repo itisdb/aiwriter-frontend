@@ -18,8 +18,12 @@ import {
   Col,
 } from "reactstrap";
 // reactstrap components
+import { HashLink as Link } from "react-router-hash-link";
 
 export default function PageHeader() {
+  function handleClick(evt) {
+    document.querySelector('[id="#purchase"]').scrollIntoView();
+  };
   return (
     <div className="page-header header-filter">
       <div className="squares square1" />
@@ -39,7 +43,7 @@ export default function PageHeader() {
           <Button color="primary" type="button" href="\ai">
               Go to AI
           </Button>
-          <Button color="default" href="">Buy Premium</Button>
+          <Button color="default" href="/purchase">Buy Premium</Button>
         </div>
       </Container>
     </div>

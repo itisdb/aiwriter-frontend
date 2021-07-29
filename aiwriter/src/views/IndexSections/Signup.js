@@ -130,8 +130,8 @@ export default function Signup() {
                     <Input
                       placeholder="Blog Title"
                       type="text"
-                      onFocus={(e) => blogTitleFocused(true)}
-                      onBlur={(e) => blogTitleFocused(false)}
+                      onFocus={(e) => setBlogTitleFocused(true)}
+                      onBlur={(e) => setBlogTitleFocused(false)}
                     />
                   </InputGroup>
                   <InputGroup

@@ -8,9 +8,8 @@ import "assets/scss/blk-design-system-react.scss?v=1.2.0";
 import "assets/demo/demo.css";
 
 import Index from "views/Index.js";
-import LandingPage from "views/examples/LandingPage.js";
-import Signup from "views/IndexSections/Signup.js";
 import ProfilePage from "views/examples/ProfilePage.js";
+import Purchase from "views/purchase.js"
 import AI from "views/ai.js"
 import Contacts from "views/examples/Contacts.js";
 
@@ -29,6 +28,10 @@ ReactDOM.render(
       <Route
         path="/contact"
         render={(props) => <Contacts {...props} />}
+      />
+      <Route
+        path="/purchase"
+        render={(props) => <Purchase {...props} />}
       />
       <Redirect from="/" to="/home" />
     </Switch>

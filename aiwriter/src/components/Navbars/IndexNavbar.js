@@ -20,6 +20,7 @@ import {
 } from "reactstrap";
 
 import JavaScript from "components/registerbutton.js";
+import Register from "components/unregisterbutton.js";
 
 export default function IndexNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
@@ -165,6 +166,8 @@ export default function IndexNavbar() {
                 </DropdownItem>
                </DropdownMenu>
             </UncontrolledDropdown>
+            <Register />
+            <div className="mb-2"></div>
             <JavaScript/>
           </Nav>
         </Collapse>
