@@ -13,6 +13,7 @@ import {
   Label,
   FormGroup,
   Form,
+  Modal,
   Input,
   InputGroupAddon,
   InputGroupText,
@@ -28,11 +29,14 @@ import PageHeader from "components/PageHeader/PageHeader.js";
 import Footer from "components/Footer/Footer.js";
 
 export default function Signup() {
+  
+  const [demoModal, setDemoModal] = React.useState(false);
   const [squares1to6, setSquares1to6] = React.useState("");
   const [squares7and8, setSquares7and8] = React.useState("");
+  const [blogTitleFocused, setBlogTitleFocused] = React.useState(false);
   const [fullNameFocus, setFullNameFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
-  const [passwordFocus, setPasswordFocus] = React.useState(false);
+  const [keywordFocus, setkeywordFocus] = React.useState(false);
   React.useEffect(() => {
     document.body.classList.toggle("register-page");
     document.documentElement.addEventListener("mousemove", followCursor);
@@ -62,7 +66,6 @@ export default function Signup() {
     };
   return (
     <>
-    <IndexNavbar />
     <div className="section section-signup">
       <Container>
         <div className="squares square-1" />
@@ -72,19 +75,17 @@ export default function Signup() {
         <Row className="row-grid justify-content-between align-items-center">
           <Col lg="6">
             <h3 className="display-3 text-white">
-              A beautiful Black Design{" "}
-              <span className="text-white">completed with examples</span>
+              Keep Bloggin' with AI{" "}
             </h3>
             <p className="text-white mb-3">
-              The Design System comes with four pre-built pages to help you get
-              started faster. You can change the text and images and you're good
+              The AI comes with simple interface to help you get
+              started faster. You can change the text and input words and you're good
               to go. More importantly, looking at them will give you a picture
-              of what you can built with this powerful Bootstrap 4 Design
-              System.
+              of what you can built with this powerful AI structure.
             </p>
             <div className="btn-wrapper">
-              <Button color="primary" to="register-page" tag={Link}>
-                Register Page
+              <Button color="primary" to="https://github.com/itisdb">
+                Documentation
               </Button>
             </div>
           </Col>
@@ -95,7 +96,7 @@ export default function Signup() {
                   alt="..."
                   src={require("assets/img/square-purple-1.png").default}
                 />
-                <CardTitle tag="h4">Register</CardTitle>
+                <CardTitle tag="h4">blogger</CardTitle>
               </CardHeader>
               <CardBody>
                 <Form className="form">
@@ -110,10 +111,27 @@ export default function Signup() {
                       </InputGroupText>
                     </InputGroupAddon>
                     <Input
-                      placeholder="Full Name"
+                      placeholder="Author Name"
                       type="text"
                       onFocus={(e) => setFullNameFocus(true)}
                       onBlur={(e) => setFullNameFocus(false)}
+                    />
+                  </InputGroup>
+                  <InputGroup
+                    className={classnames({
+                      "input-group-focus": blogTitleFocused,
+                    })}
+                  >
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="tim-icons icon-pencil" />
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Input
+                      placeholder="Blog Title"
+                      type="text"
+                      onFocus={(e) => blogTitleFocused(true)}
+                      onBlur={(e) => blogTitleFocused(false)}
                     />
                   </InputGroup>
                   <InputGroup
@@ -135,19 +153,19 @@ export default function Signup() {
                   </InputGroup>
                   <InputGroup
                     className={classnames({
-                      "input-group-focus": passwordFocus,
+                      "input-group-focus": keywordFocus,
                     })}
                   >
                     <InputGroupAddon addonType="prepend">
                       <InputGroupText>
-                        <i className="tim-icons icon-lock-circle" />
+                      <i className="tim-icons icon-paper" />
                       </InputGroupText>
                     </InputGroupAddon>
                     <Input
-                      placeholder="Password"
+                      placeholder="Keywords"
                       type="text"
-                      onFocus={(e) => setPasswordFocus(true)}
-                      onBlur={(e) => setPasswordFocus(false)}
+                      onFocus={(e) => setkeywordFocus(true)}
+                      onBlur={(e) => setkeywordFocus(false)}
                     />
                   </InputGroup>
                   <FormGroup check className="text-left">
@@ -163,16 +181,63 @@ export default function Signup() {
                 </Form>
               </CardBody>
               <CardFooter>
-                <Button className="btn-round" color="primary" size="lg">
-                  Get Started
-                </Button>
+                <Button color="btn-round" color="primary" onClick={() => setDemoModal(true)}>
+              Launch Modal
+            </Button>
+                {/* Start Demo Modal */}
+          <Modal isOpen={demoModal} toggle={() => setDemoModal(false)}>
+            <div className="modal-header justify-content-center">
+              <button className="close" onClick={() => setDemoModal(false)}>
+                <i className="tim-icons icon-simple-remove" />
+              </button>
+              <h4 className="title title-up">Your Blog</h4>
+            </div>
+            <div className="modal-body">
+              <p>
+                Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts. Separated
+                they live in Bookmarksgrove right at the coast of the Semantics,
+                a large language ocean. A small river named Duden flows by their
+                place and supplies it with the necessary regelialia. It is a
+                paradisematic country, in which roasted parts of sentences fly
+                into your mouth. Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts. Separated
+                they live in Bookmarksgrove right at the coast of the Semantics,
+                a large language ocean. Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts. Separated
+                they live in Bookmarksgrove right at the coast of the Semantics,
+                a large language ocean. A small river named Duden flows by their
+                place and supplies it with the necessary regelialia. It is a
+                paradisematic country, in which roasted parts of sentences fly
+                into your mouth. Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts. Separated
+                they live in Bookmarksgrove right at the coast of the Semantics,
+                a large language ocean. 
+              </p>
+            </div>
+            <div className="modal-footer">
+              <Button color="default" type="button">
+                Save
+              </Button>
+              <Button color="default" type="button" color="primary">
+                Share
+              </Button>
+              <Button
+                color="danger"
+                type="button"
+                onClick={() => setDemoModal(false)}
+              >
+                Close
+              </Button>
+            </div>
+          </Modal>
+          {/* End Demo Modal */}
               </CardFooter>
             </Card>
           </Col>
         </Row>
       </Container>
     </div>
-    <Footer />
   </>
   );
 }

@@ -96,7 +96,7 @@ export default function JavaScript() {
               Launch Modal Form
             </Button>
           </Col>
-          {/* Sart Demo Modal */}
+          {/* Start Demo Modal */}
           <Modal isOpen={demoModal} toggle={() => setDemoModal(false)}>
             <div className="modal-header justify-content-center">
               <button className="close" onClick={() => setDemoModal(false)}>

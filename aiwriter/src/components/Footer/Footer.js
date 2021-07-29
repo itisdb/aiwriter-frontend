@@ -28,6 +28,11 @@ export default function Footer() {
                 </NavLink>
               </NavItem>
               <NavItem>
+                <NavLink href="/profile">
+                  Profile
+                </NavLink>
+              </NavItem>
+              <NavItem>
                 <NavLink href="/contact">
                   Contact Us
                 </NavLink>
