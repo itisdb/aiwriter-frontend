@@ -1,6 +1,5 @@
 import React from "react";
 import classnames from "classnames";
-import { Link } from "react-router-dom";
 // reactstrap components
 import {
   Button,
@@ -23,47 +22,13 @@ import {
   Col,
 } from "reactstrap";
 
-// core components
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import PageHeader from "components/PageHeader/PageHeader.js";
-import Footer from "components/Footer/Footer.js";
-
 export default function Signup() {
   
   const [demoModal, setDemoModal] = React.useState(false);
-  const [squares1to6, setSquares1to6] = React.useState("");
-  const [squares7and8, setSquares7and8] = React.useState("");
   const [blogTitleFocused, setBlogTitleFocused] = React.useState(false);
   const [fullNameFocus, setFullNameFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
   const [keywordFocus, setkeywordFocus] = React.useState(false);
-  React.useEffect(() => {
-    document.body.classList.toggle("register-page");
-    document.documentElement.addEventListener("mousemove", followCursor);
-    // Specify how to clean up after this effect:
-    return function cleanup() {
-      document.body.classList.toggle("register-page");
-      document.documentElement.removeEventListener("mousemove", followCursor);
-    };
-  },[]);
-  const followCursor = (event) => {
-    let posX = event.clientX - window.innerWidth / 2;
-    let posY = event.clientY - window.innerWidth / 6;
-    setSquares1to6(
-      "perspective(500px) rotateY(" +
-        posX * 0.05 +
-        "deg) rotateX(" +
-        posY * -0.05 +
-        "deg)"
-    );
-    setSquares7and8(
-      "perspective(500px) rotateY(" +
-        posX * 0.02 +
-        "deg) rotateX(" +
-        posY * -0.02 +
-        "deg)"
-    );
-    };
   return (
     <>
     <div className="section section-signup">
@@ -181,7 +146,7 @@ export default function Signup() {
                 </Form>
               </CardBody>
               <CardFooter>
-                <Button color="btn-round" color="primary" onClick={() => setDemoModal(true)}>
+                <Button color="btn-round primary" onClick={() => setDemoModal(true)}>
               Launch Modal
             </Button>
                 {/* Start Demo Modal */}
@@ -219,7 +184,7 @@ export default function Signup() {
               <Button color="default" type="button">
                 Save
               </Button>
-              <Button color="default" type="button" color="primary">
+              <Button color="default" type="button">
                 Share
               </Button>
               <Button

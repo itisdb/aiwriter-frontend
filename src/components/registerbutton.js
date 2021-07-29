@@ -1,50 +1,20 @@
 import React from "react";
 import classnames from "classnames";
-// react plugin used to create datetimepicker
-import ReactDatetime from "react-datetime";
-
 // reactstrap components
 import {
   Button,
   FormGroup,
   Container,
-  Row,
-  Col,
-  UncontrolledTooltip,
-  UncontrolledPopover,
-  PopoverBody,
-  PopoverHeader,
   Modal,
   Form,
   Input,
   InputGroup,
   InputGroupAddon,
   InputGroupText,
-  Label,
-  UncontrolledCarousel,
+  Label
 } from "reactstrap";
 
-const carouselItems = [
-  {
-    src: require("assets/img/denys.jpg").default,
-    altText: "Slide 1",
-    caption: "",
-  },
-  {
-    src: require("assets/img/fabien-bazanegue.jpg").default,
-    altText: "Slide 2",
-    caption: "",
-  },
-  {
-    src: require("assets/img/mark-finn.jpg").default,
-    altText: "Slide 3",
-    caption: "",
-  },
-];
-
 export default function JavaScript() {
-  const [demoModal, setDemoModal] = React.useState(false);
-  const [miniModal, setMiniModal] = React.useState(false);
   const [formModal, setFormModal] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
   const [passwordFocus, setPasswordFocus] = React.useState(false);

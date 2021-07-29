@@ -1,29 +1,12 @@
 import React from "react";
-import classnames from "classnames";
-// plugin that creates slider
-import Slider from "nouislider";
 
 // reactstrap components
 import {
   Button,
-  Label,
-  FormGroup,
-  CustomInput,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
   Container,
-  Row,
-  Col,
 } from "reactstrap";
 // reactstrap components
-import { HashLink as Link } from "react-router-hash-link";
-
 export default function PageHeader() {
-  function handleClick(evt) {
-    document.querySelector('[id="#purchase"]').scrollIntoView();
-  };
   return (
     <div className="page-header header-filter">
       <div className="squares square1" />

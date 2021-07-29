@@ -22,32 +22,13 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip,
-  UncontrolledCarousel,
+  UncontrolledTooltip
 } from "reactstrap";
 
 // core components
 import ExamplesNavbar from "components/Navbars/RegisteredUser.js";
 import Footer from "components/Footer/Footer.js";
-import JavaScript from "components/aibutton.js"
 
-const carouselItems = [
-  {
-    src: require("assets/img/denys.jpg").default,
-    altText: "Slide 1",
-    caption: "Big City Life, United States",
-  },
-  {
-    src: require("assets/img/fabien-bazanegue.jpg").default,
-    altText: "Slide 2",
-    caption: "Somewhere Beyond, United States",
-  },
-  {
-    src: require("assets/img/mark-finn.jpg").default,
-    altText: "Slide 3",
-    caption: "Stocks, United States",
-  },
-];
 
 let ps = null;
 
